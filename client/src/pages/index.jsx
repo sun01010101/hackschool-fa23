@@ -1,22 +1,21 @@
 import Image from 'next/image';
-import styles from '../styles/Home.module.css'
-import acmLogo from '../assets/acmlogo.png'
-import Navbar from '../components/navbar-component/navbar.jsx'
+import styles from '../styles/Home.module.css';
+import acmLogo from '../assets/acmlogo.png';
 
 
-export default function Home() {
+function Home() {
   return (
-    /* Each function in JSX can only return ONE DOM element, so we have one top-level div */
-    <div className={styles.main}> 
-      <Navbar />
+    <div className={styles.main}>
         <div className={styles.welcome}>
-          <h2> Welcome to HackRacer! </h2>
-          {"We do typeracing"}
-        </div>
-      <div className={styles.image}>
-        <Image src={acmLogo} height={300} width={300} alt='ACM Logo'></Image>
-        {}
+          <h2>Welcome to HackRacer!</h2>
+          <p>You can navigate to <i>Add Sentence</i> button at the top to add a new sentence. 
+              Then you can go over to <i>Play Game</i> to start playing the game. 
+          </p>
+      </div>
+      <div className={styles.image}><Image src={acmLogo} width={200} height={200} alt="acmlogo"/>
       </div>
     </div>
-  )
+  );
 }
+
+export default Home;
